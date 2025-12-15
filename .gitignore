@@ -3,10 +3,10 @@
 !*.md
 !*.sh
 
-!/src
+!/backend
 !/data
 
-!/src/**
+!/backend/**
 !/data/**
 
 !.gitignore
