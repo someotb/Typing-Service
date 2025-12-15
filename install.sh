@@ -12,8 +12,7 @@ sudo apt install -y \
     python3 \
     python3-pip
 
-echo "Installing nlohmann/json..."
-sudo apt install -y nlohmann-json3-dev
-
+echo "Installing libcpp-httplib-dev..."
+sudo apt install -y libcpp-httplib-dev
 
 echo "Dependencies installed successfully!"

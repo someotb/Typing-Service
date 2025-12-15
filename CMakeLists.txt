@@ -3,8 +3,12 @@ project(typing_service)
 
 set(CMAKE_CXX_STANDARD 17)
 
-find_package(nlohmann_json REQUIRED)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(HTTPLIB REQUIRED cpp-httplib)
 
-add_executable(client src/client.cpp)
+add_executable(server backend/server.cpp)
 
-target_link_libraries(client nlohmann_json::nlohmann_json)
+target_include_directories(server PRIVATE ${HTTPLIB_INCLUDE_DIRS})
+target_link_libraries(server ${HTTPLIB_LIBRARIES})
+
+target_link_directories(server PRIVATE ${HTTPLIB_LIBRARY_DIRS})
