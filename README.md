@@ -8,6 +8,6 @@
 
 1) `install.sh` - easy way to isntall required libraries
 2) mkdir build; cd build; cmake ..; make
-3) Start `server.py` from `src` if not, change path in `dataparser.py`
+3) Start server.cpp in dir 'backend'! Check for way to 'data.dat'!
 
 > Project aims to learn base knowledge of working with string, client-server architecture and for getting fun;)

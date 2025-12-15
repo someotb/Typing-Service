@@ -3,9 +3,11 @@
 !*.md
 !*.sh
 
+!/frontend
 !/backend
 !/data
 
+!/frontend/**
 !/backend/**
 !/data/**
 

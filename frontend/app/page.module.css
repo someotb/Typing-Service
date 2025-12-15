@@ -1,0 +1,124 @@
+:root {
+    /* Оставляем только тёмную тему */
+    --bg-primary: #111827;
+    --bg-secondary: #1f2937;
+    --card-bg: #1f2937;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --border-color: #4b5563;
+    --text-area-bg: #374151;
+    --button-bg: #6366f1;
+    --button-hover: #4f46e5;
+    --button-disabled: #4b5563;
+    --timer-color: #f87171;
+    --accuracy-color: #a78bfa;
+    --error-color: #f87171;
+}
+
+/* Убираем .dark, потому что всегда тёмная */
+.container {
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom right,
+        var(--bg-primary),
+        var(--bg-secondary)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--text-primary);
+}
+
+.card {
+    width: 100%;
+    max-width: 800px;
+    background: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    space-y: 1.5rem;
+}
+
+.title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.textArea {
+    background: var(--text-area-bg);
+    border: 2px dashed var(--border-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textDisplay {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.textInput {
+    width: 100%;
+    height: 8rem;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    resize: none;
+    outline: none;
+    background: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.textInput:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+    border-color: var(--accuracy-color);
+}
+
+.timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--timer-color);
+}
+
+.accuracy {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+}
+
+.accuracyValue {
+    font-weight: bold;
+    color: var(--accuracy-color);
+}
+
+.button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    background-color: var(--button-bg);
+    color: white;
+}
+
+.button:hover:not(:disabled) {
+    background-color: var(--button-hover);
+}
+
+.button:disabled {
+    background-color: var(--button-disabled);
+    cursor: not-allowed;
+}
+
+.error {
+    color: var(--error-color);
+    text-align: center;
+    font-weight: 500;
+}
